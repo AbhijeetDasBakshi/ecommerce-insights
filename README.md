@@ -1,1 +1,1 @@
-# ecommerce-insights
+# E-commerce Customer Insights System 
