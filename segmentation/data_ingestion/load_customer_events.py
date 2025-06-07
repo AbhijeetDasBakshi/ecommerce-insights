@@ -11,7 +11,7 @@ def convert_timestamp(ts):
 def fetch_and_clean_customer_events():
     collection = get_collection("customer_events")
 
-    # Fetch relevant fields
+    # Fetch relevant fields, limit to 30k docs
     cursor = collection.find({}, {
         "_id": 0,
         "timestamp": 1,
@@ -19,7 +19,7 @@ def fetch_and_clean_customer_events():
         "event": 1,
         "itemid": 1,
         "transactionid": 1
-    })
+    }).limit(30000)
 
     # Convert to DataFrame
     df = pd.DataFrame(list(cursor))
