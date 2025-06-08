@@ -5,7 +5,7 @@ DATA_PATH = "segmentation/data/cleaned_customer_events.csv"
 OUTPUT_PATH = "segmentation/data/customer_events_features.csv"
 
 def main():
-    print(" Loading first 10,000 rows from cleaned customer event data...")
+    print(" Loading first 30,000 rows from cleaned customer event data...")
     df = pd.read_csv(DATA_PATH, parse_dates=["timestamp"], nrows=30000)
 
     # Extract hour and day of week
