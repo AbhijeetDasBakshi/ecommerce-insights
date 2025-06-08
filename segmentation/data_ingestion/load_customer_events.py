@@ -19,7 +19,7 @@ def fetch_and_clean_customer_events():
         "event": 1,
         "itemid": 1,
         "transactionid": 1
-    }).limit(30000)
+    })
 
     # Convert to DataFrame
     df = pd.DataFrame(list(cursor))
@@ -27,15 +27,14 @@ def fetch_and_clean_customer_events():
     # Convert timestamp
     df["timestamp"] = df["timestamp"].apply(lambda x: convert_timestamp(x))
 
-    # Filter only required event types
-    valid_events = ["view", "addtocart", "transaction"]
-    df = df[df["event"].isin(valid_events)]
+    # Print all unique event types
+    print("Unique event types:", df["event"].unique())
 
     return df
 
 if __name__ == "__main__":
     df_cleaned = fetch_and_clean_customer_events()
-    print(f"Cleaned data shape: {df_cleaned.shape}")
+    print(f"\n Cleaned data shape: {df_cleaned.shape}")
     print(df_cleaned.head())
 
     # Save to CSV (optional)
