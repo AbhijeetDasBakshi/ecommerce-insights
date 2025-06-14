@@ -1,5 +1,5 @@
 #Removes all large file in data
-segmentation/data/*.csv
+segmentation/data/cleaned_customer_events.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -194,4 +194,4 @@ cython_debug/
 #  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
-.cursorindexingignore
+.cursorindexingignoresegmentation/data/cleaned_customer_events.csv
