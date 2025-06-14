@@ -1,4 +1,5 @@
-
+#Removes all large file in data
+segmentation/data/cleaned_customer_events.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
