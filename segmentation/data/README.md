@@ -3,7 +3,7 @@
 To keep the repository lightweight and within GitHub's file size limits, **large cleaned data files are not included** in the repo.
 
 ### ❌ Not Included
-- `segmentation/data/*.csv` (≈118 MB)
+- `segmentation/data/cleaned_customer_events.csv` (≈118 MB)
 
 This file is intentionally excluded and listed in `.gitignore` to prevent Git LFS requirements and push errors.
 
